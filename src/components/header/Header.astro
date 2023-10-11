@@ -1,1 +1,103 @@
-<header></header>
+---
+const navLinks = [
+  {
+    name: "首页",
+    url: "/",
+  },
+  {
+    name: "新闻公告",
+    url: "/news",
+  },
+  {
+    name: "政策法规",
+    url: "/policy",
+  },
+  {
+    name: "道协活动",
+    url: "/activity",
+  },
+  {
+    name: "道教文化",
+    url: "/culture",
+  },
+  {
+    name: "宫观介绍",
+    url: "/temple",
+  },
+  {
+    name: "信息查询",
+    url: "/search",
+  },
+  {
+    name: "在线服务",
+    url: "/service",
+  },
+  {
+    name: "关于我们",
+    url: "/about",
+  },
+];
+
+const { pathname } = Astro.url;
+---
+
+<header class="space-y-2 py-2">
+  <h2 class="sr-only">Website Header</h2>
+
+  <div class="max-w-7xl mx-auto px-4">
+    <nav>
+      <ul class="flex justify-end space-x-2">
+        <li>
+          <a href="#">登录</a>
+        </li>
+        <li>
+          <a href="#">注册</a>
+        </li>
+        <li>
+          <a href="#">协会事务</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="text-yellow-500">
+      <h3 class="text-4xl font-bold">协会名称</h3>
+      <p>协会简介</p>
+    </div>
+
+    <search class="flex justify-end">
+      <form action="#" method="get" class="flex space-x-2">
+        <input
+          placeholder="搜索"
+          class="border-2 w-64 border-secondary rounded-full p-2"
+        />
+        <button type="submit" class="text-yellow-500">搜索</button>
+      </form>
+    </search>
+  </div>
+
+  <nav class="bg-secondary">
+    <ul class="container flex justify-center">
+      {
+        navLinks.map((navLink) => {
+          const { url, name } = navLink;
+          const isActive =
+            pathname === url || (pathname.startsWith(url) && url !== "/");
+          return (
+            <li>
+              <a
+                class={`px-8 py-4 block ${
+                  isActive
+                    ? "text-primary bg-primary-50"
+                    : "text-white hover:text-primary hover:bg-primary-50"
+                }`}
+                href={navLink.url}
+              >
+                {navLink.name}
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+</header>
