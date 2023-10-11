@@ -1,5 +1,6 @@
 ---
 import MainLayout from "@layouts/MainLayout.astro";
+import SearchIcon from "@assets/SearchIcon.astro";
 ---
 
 <MainLayout>
@@ -166,6 +167,44 @@ import MainLayout from "@layouts/MainLayout.astro";
             <div class="bg-blue-600 h-24 rounded-lg"></div>
           </nav>
         </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-4">
+    <div class="bg-primary-50 p-4 rounded-lg overflow-hidden">
+      <header class="relative w-fit">
+        <div class="relative w-fit">
+          <div
+            class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+          >
+            <p inert class="sr-only">test</p>
+          </div>
+
+          <div
+            class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+          >
+            <h3 class="text-white">信息查询</h3>
+          </div>
+        </div>
+      </header>
+
+      <div class="mt-8 rounded-tl-lg overflow-hidden">
+        <button class="p-2 bg-primary text-white">教职证查询</button>
+        <button class="p-2 bg-secondary text-primary-100">皈依证查询</button>
+      </div>
+
+      <div
+        class="relative text-primary px-4 py-2 items-center flex justify-between"
+      >
+        <input
+          placeholder="输入姓名、道名查询"
+          class="pl-16 left-0 right-0 absolute w-full h-full border-2 bg-primary-50 border-primary text-black rounded-2xl placeholder-gray-500"
+        />
+        <div class="relative w-8 h-8">
+          <SearchIcon />
+        </div>
+        <p class="relative text-end">查询</p>
       </div>
     </div>
   </section>
