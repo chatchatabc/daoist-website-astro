@@ -365,4 +365,52 @@ import SearchIcon from "@assets/SearchIcon.astro";
       </div>
     </div>
   </section>
+
+  <section class="container mt-4">
+    <div
+      class="p-4 bg-gradient-to-b from-primary-50 rounded-lg overflow-hidden via-primary-50 to-primary-200"
+    >
+      <header>
+        <div class="relative w-fit">
+          <div
+            class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+          >
+            <p inert class="sr-only">test</p>
+          </div>
+
+          <div
+            class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+          >
+            <h3 class="text-white">道教视频</h3>
+          </div>
+        </div>
+      </header>
+
+      <div class="mt-8 flex items-center px-4">
+        <button>&lt;</button>
+        <ul class="flex justify-center">
+          {
+            [...Array(5)].map(() => {
+              return (
+                <li class="px-6">
+                  <figure class="bg-secondary px-4 py-8">
+                    <div class="p-4 py-8">
+                      <div class="pb-[50%] bg-primary" />
+                    </div>
+
+                    <figcaption>
+                      <p>
+                        「道教发展史」什么是道？道家学说是如何跟各路神仙混在一起的？
+                      </p>
+                    </figcaption>
+                  </figure>
+                </li>
+              );
+            })
+          }
+        </ul>
+        <button>&gt;</button>
+      </div>
+    </div>
+  </section>
 </MainLayout>
