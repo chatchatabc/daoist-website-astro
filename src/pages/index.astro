@@ -208,4 +208,37 @@ import SearchIcon from "@assets/SearchIcon.astro";
       </div>
     </div>
   </section>
+
+  <section class="container flex py-4 items-center">
+    <div class="w-1/4 px-4">
+      <div class="rounded-2xl bg-secondary p-8 flex items-center">
+        <ul
+          class="rounded-l-lg overflow-hidden w-full divide-y-2 divide-secondary text-center"
+        >
+          <li class="p-8 bg-primary text-white">道教学习园地</li>
+          <li class="p-8 bg-primary-50">学习XXX</li>
+          <li class="p-8 bg-primary-50">道门初窥</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="w-3/4 px-4">
+      <ul>
+        {
+          [...Array(3)].map(() => {
+            return (
+              <li>
+                <article class="pl-8 py-4 border-b border-primary flex-1">
+                  <h4 class="text-lg">道教教派简介（I）早期主要教派</h4>
+                  <p class="text-sm text-gray-500 line-clamp-2">
+                    兴起于战国末，是指从事方术、方技等道术的人，时称方士。包括天文、医学、神仙、占卜、相术、堪舆等技艺并宣传服食、祭祀可以长生成仙的人。据《史记。封禅书》载：最早的方士是周灵王时候的苌弘，据称他会阴阳之学，明鬼神之事。至战国时最有影响的方士是齐人邹衍，他倡导“天人合一”思想，提出“天人感应”说，认为人的行为会影响天地，天地的变化也会影响人的行为，因此人要顺应天地的变化，以求长生不老。邹衍的学说对后世道教的发展产生了重要影响。
+                  </p>
+                </article>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>
+  </section>
 </MainLayout>
