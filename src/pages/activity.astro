@@ -1,0 +1,141 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <div class="container">
+    <ul class="space-y-8 my-8">
+      <li>
+        <article class="bg-primary-50 p-8 space-y-8">
+          <header class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <h3 class="text-lg font-bold">
+                桂平市罗丛岩古雅道观开展“倾情社区、爱心助学”活动
+              </h3>
+
+              <div class="text-sm rounded-md px-4 py-1 bg-blue-500 text-white">
+                待开始
+              </div>
+            </div>
+
+            <p>
+              <span class="text-gray-500">活动时间：</span>
+              <span> 2023.09.03 10:00-2023.09.10 12:00</span>
+            </p>
+          </header>
+
+          <p class="text-gray-700">
+            为进一步做好道观“两个服务”工作，践行道教“济世利人”的传统美德，上海钦赐仰殿道观于8月3日开展年度“倾情社区、爱心助学”慈善捐款活动。钦赐仰殿道观住持丁常云道长、陆家嘴街道办事处副主任高睿及受助学生20余人参加活动
+          </p>
+
+          <footer class="flex justify-between items-center">
+            <div class="flex space-x-8">
+              <p>
+                <span class="text-gray-500">活动地点：</span>
+                <span>桂平市罗丛岩古雅道观</span>
+              </p>
+              <p>
+                <span class="text-gray-500">参与人员：</span>
+                <span>普通信众、皈依人员、传度人员、教职人员</span>
+              </p>
+            </div>
+
+            <a class="px-16 py-2 block text-white rounded-md bg-blue-500"
+              >待开始</a
+            >
+          </footer>
+        </article>
+      </li>
+
+      <li>
+        <article class="bg-primary-50 p-8 space-y-8">
+          <header class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <h3 class="text-lg font-bold">
+                桂平市罗丛岩古雅道观开展“倾情社区、爱心助学”活动
+              </h3>
+
+              <div class="text-sm rounded-md px-4 py-1 bg-primary text-white">
+                待开始
+              </div>
+            </div>
+
+            <p>
+              <span class="text-gray-500">活动时间：</span>
+              <span> 2023.09.03 10:00-2023.09.10 12:00</span>
+            </p>
+          </header>
+
+          <p class="text-gray-700">
+            为进一步做好道观“两个服务”工作，践行道教“济世利人”的传统美德，上海钦赐仰殿道观于8月3日开展年度“倾情社区、爱心助学”慈善捐款活动。钦赐仰殿道观住持丁常云道长、陆家嘴街道办事处副主任高睿及受助学生20余人参加活动
+          </p>
+
+          <footer class="flex justify-between items-center">
+            <div class="flex space-x-8">
+              <p>
+                <span class="text-gray-500">活动地点：</span>
+                <span>桂平市罗丛岩古雅道观</span>
+              </p>
+              <p>
+                <span class="text-gray-500">参与人员：</span>
+                <span>普通信众、皈依人员、传度人员、教职人员</span>
+              </p>
+            </div>
+
+            <a class="px-16 py-2 block text-white rounded-md bg-primary"
+              >待开始</a
+            >
+          </footer>
+        </article>
+      </li>
+
+      {
+        [...Array(3)].map(() => {
+          return (
+            <li>
+              <article class="bg-primary-50 p-8 space-y-8">
+                <header class="flex items-center justify-between">
+                  <div class="flex items-center space-x-2">
+                    <h3 class="text-lg font-bold">
+                      桂平市罗丛岩古雅道观开展“倾情社区、爱心助学”活动
+                    </h3>
+
+                    <div class="text-sm rounded-md px-4 py-1 bg-gray-500 text-white">
+                      待开始
+                    </div>
+                  </div>
+
+                  <p>
+                    <span class="text-gray-500">活动时间：</span>
+                    <span> 2023.09.03 10:00-2023.09.10 12:00</span>
+                  </p>
+                </header>
+
+                <p class="text-gray-700">
+                  为进一步做好道观“两个服务”工作，践行道教“济世利人”的传统美德，上海钦赐仰殿道观于8月3日开展年度“倾情社区、爱心助学”慈善捐款活动。钦赐仰殿道观住持丁常云道长、陆家嘴街道办事处副主任高睿及受助学生20余人参加活动
+                </p>
+
+                <footer class="flex justify-between items-center">
+                  <div class="flex space-x-8">
+                    <p>
+                      <span class="text-gray-500">活动地点：</span>
+                      <span>桂平市罗丛岩古雅道观</span>
+                    </p>
+                    <p>
+                      <span class="text-gray-500">参与人员：</span>
+                      <span>普通信众、皈依人员、传度人员、教职人员</span>
+                    </p>
+                  </div>
+
+                  <a class="px-16 py-2 block text-white rounded-md bg-gray-500">
+                    待开始
+                  </a>
+                </footer>
+              </article>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</MainLayout>
