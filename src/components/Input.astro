@@ -1,0 +1,26 @@
+---
+type Props = {
+  classNames?: {
+    wrapper?: string;
+    input?: string;
+  };
+  placeholder?: string;
+  type?: any;
+};
+
+const { classNames, placeholder, type } = Astro.props as Props;
+---
+
+<div class={`relative flex items-center ${classNames?.wrapper}`}>
+  <input
+    placeholder={placeholder}
+    type={type}
+    class={`absolute w-full h-full top-0 left-0 ${classNames?.input}`}
+  />
+  <div class="relative">
+    <slot name="prefix" />
+  </div>
+  <div class="relative ml-auto">
+    <slot name="suffix" />
+  </div>
+</div>
