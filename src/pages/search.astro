@@ -1,0 +1,61 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import Input from "@components/Input.astro";
+import CaretIcon from "@assets/CaretIcon.astro";
+---
+
+<MainLayout>
+  <h1 class="sr-only">Search Taoist</h1>
+  <div class="flex container px-2 mt-8">
+    <aside class="w-[300px] px-4 text-sm">
+      <nav class="rounded-2xl bg-secondary px-8 py-16 flex items-center">
+        <ul
+          class="rounded-l-lg overflow-hidden w-full divide-y-2 divide-secondary text-center"
+        >
+          <li class="p-8 bg-primary text-white">教职人员</li>
+          <li class="p-8 bg-primary-50">皈依人员</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="bg-primary bg-opacity-10 flex-1">
+      <h2 class="sr-only">Taoist List</h2>
+
+      <div class="flex space-x-4 p-16">
+        <!-- Dropdown -->
+        <div
+          class="flex border-2 border-primary rounded-md w-32 justify-between px-4 py-2 items-center bg-primary-50"
+        >
+          <select
+            id="search-select"
+            class="bg-primary-50 [::-ms-expand]:hidden"
+          >
+            <option>全部</option>
+            <option>道士</option>
+          </select>
+
+          <button id="search-select-btn" class="w-4 h-4">
+            <CaretIcon />
+          </button>
+        </div>
+
+        <!-- Input -->
+        <Input
+          classNames={{
+            wrapper: "w-80 p-2",
+            input:
+              "rounded-md p-2 bg-primary-50 border-2 border-primary focus:outline-none focus:ring-1 focus:ring-primary",
+          }}
+        >
+          <p slot="suffix">搜索</p>
+        </Input>
+      </div>
+
+      <ul class="px-24 pb-16">
+        <li class="p-4 w-1/4">
+          <div class="pb-[150%] bg-primary"></div>
+        </li>
+      </ul>
+    </section>
+  </div>
+</MainLayout>
