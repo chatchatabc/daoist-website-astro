@@ -1,0 +1,106 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import PlayIcon from "@assets/PlayIcon.astro";
+---
+
+<MainLayout>
+  <div class="flex container px-2 mt-8">
+    <aside class="w-[300px] px-4 text-sm">
+      <nav class="rounded-2xl bg-secondary px-8 py-16 flex items-center">
+        <ul
+          class="rounded-l-lg overflow-hidden w-full divide-y-2 divide-secondary text-center"
+        >
+          <li class="p-8 bg-primary text-white">道协介绍</li>
+          <li class="p-8 bg-primary-50">申请合作</li>
+          <li class="p-8 bg-primary-50">投诉与建议</li>
+          <li class="p-8 bg-primary-50">联系我们</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="bg-primary-50 p-8 flex-1 rounded-lg overflow-hidden">
+      <header>
+        <div class="relative w-fit">
+          <div
+            class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+          >
+            <p inert class="sr-only">test</p>
+          </div>
+
+          <div
+            class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+          >
+            <h2 class="text-white">宫观介绍</h2>
+          </div>
+        </div>
+      </header>
+
+      <div class="mt-4">
+        <section class="float-right w-1/3 p-8 bg-secondary self-start">
+          <h3 class="font-bold text-lg">广西道教协会简介</h3>
+
+          <div class="flex justify-between items-center">
+            <p>广西壮族自治区道教协会 02:52</p>
+
+            <div
+              class="w-8 h-8 p-2 bg-primary text-white rounded-full flex items-center justify-center"
+            >
+              <PlayIcon />
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="h-2 rounded-full bg-white w-full">
+              <div class="w-6 h-2 bg-primary rounded-full"></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="px-8 space-y-8">
+          <section>
+            <header class="w-1/2 border-b py-1 border-primary">
+              <h3 class="text-xl font-bold">广西道教协会</h3>
+            </header>
+
+            <p class="mt-4">
+              成立于2013年6月14日，是全自治区道教信众在蔡万圻道长带领下历经20载弘道传教；
+              在自治区党委、统战部、民宗委等部门领导的关怀下组建的爱国宗教团体和教务组织。
+            </p>
+          </section>
+
+          <section>
+            <header class="w-1/2 border-b py-1 border-primary">
+              <h3 class="text-xl font-bold">成立地点</h3>
+            </header>
+
+            <p class="mt-4">广西壮族自治区南宁市。</p>
+          </section>
+
+          <section>
+            <header class="w-1/2 border-b py-1 border-primary">
+              <h3 class="text-xl font-bold">协会宗旨</h3>
+            </header>
+
+            <p class="mt-4">
+              建立健全有关教规、教制；加强对全区道教团体、道教组织以及道教宫观的教务指导；团结、带领全区道教徒爱国爱教，拥护中国共产党的领导和社会主义制度，兴办道教事业，弘扬道教教义，维护道教界合法权益；传扬道教文化，发扬优良传统，充分发挥宗教团体的桥梁纽带作用，宣传党的宗教政策爱国弘道，济世利人，积极参加社会主义物质文明、政治文明、精神文明和生态文明建设，力维护宗教和睦、民族团结、社会和谐、祖国统一、世界和平贡献出我们独特的贡献。协会自成立以来，积极开展区内教务指导工作和道教活动场所恢复工作。先后恢复灵山县六峰山北帝庙、灵山县旧州上井北帝庙、钦州市大寺北帝庙、柳州南评宫、柳州雷塘庙、贵港市覃塘北帝庙、桂林市白云观、钦州市钦南区康熙岭伏波庙、桂平市白石山三清观、桂平市罗丛岩古雅道观、南宁万寿宫（筹备中）等11所宫观和道教固定活动处所。协会定期举办道教人士培训班，为各宫观输送了大量的爱国爱教的中青年道教人才。年轻的广西道教将一如既往的带领全区道教信众和道教教职人员做好我们本职工作。不辜负党对我们的信任。坚持宗教中国化方向，与时代同行与祖国同步，共创中华民族的伟大复兴的美好未来！
+            </p>
+          </section>
+
+          <section>
+            <header class="w-1/2 border-b py-1 border-primary">
+              <h3 class="text-xl font-bold">协会成员</h3>
+            </header>
+
+            <ul class="mt-4">
+              <li>会长：</li>
+              <li>副会长：</li>
+              <li>秘书长：</li>
+              <li>副秘书长：</li>
+              <li>办公室主任：</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+  </div>
+</MainLayout>
