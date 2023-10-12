@@ -1,0 +1,140 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <section class="container mt-4">
+    <div
+      class="p-4 bg-gradient-to-b from-primary-50 rounded-lg overflow-hidden via-primary-50 to-primary-200"
+    >
+      <h2 class="sr-only">Temple Maps</h2>
+
+      <div class="flex mt-4">
+        <!-- Left -->
+        <div class="w-2/3 pr-4 flex flex-col">
+          <!-- Header -->
+          <div class="flex space-x-8">
+            <!-- Select -->
+            <div
+              class="py-2 w-40 px-4 border-2 border-primary rounded-full bg-primary-50"
+            >
+              <select class="bg-primary-50">
+                <option>全部</option>
+                <option>全部</option>
+                <option>全部</option>
+                <option>全部</option>
+                <option>全部</option>
+              </select>
+            </div>
+
+            <!-- Input -->
+            <div
+              class="border-2 border-primary bg-primary-50 px-4 py-2 rounded-full flex-1 flex"
+            >
+              <input
+                placeholder="按宫观名称搜索"
+                class="bg-primary-50 flex-1"
+              />
+              <p>查询</p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="bg-primary flex-1 mt-4 rounded-lg"></div>
+        </div>
+
+        <!-- Right -->
+        <div class="w-1/3 p-8 bg-secondary rounded-lg overflow-hidden">
+          <ul>
+            {
+              [...Array(8)].map(() => {
+                return (
+                  <li class="flex items-center space-x-2 p-4 text-white">
+                    <div class="w-3 h-3 bg-gradient-to-r from-primary-400 to-primary rounded-full" />
+
+                    <p>皈依道、经、师三宝的含义</p>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mt-8">
+    <div
+      class="p-8 space-y-8 bg-gradient-to-b from-primary-50 rounded-lg overflow-hidden via-primary-50 to-primary-200"
+    >
+      <header>
+        <h2 class="text-primary text-4xl font-bold">柳州市南评宫</h2>
+      </header>
+
+      <section class="space-y-8">
+        <header>
+          <div class="relative w-fit">
+            <div
+              class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+            >
+              <p inert class="sr-only">test</p>
+            </div>
+
+            <div
+              class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+            >
+              <h3 class="text-white">宫观介绍</h3>
+            </div>
+          </div>
+        </header>
+
+        <figure class="flex">
+          <figcaption class="pr-4 space-y-4">
+            <p>
+              柳州市区三大道教圣地—盘古庙（主祀盘古神）、雷潭庙（主祀龙王）、南评宫
+            </p>
+            <p>
+              南评宫属柳州民间祀庙，主神像相传为唐朝将军张相善，另一说法为汉朝伏波将军马援。因将军曾在广西三奉一代平乱有功而为人民纪念，奉为平安信神。宫殿内的配神像为四大金刚，分别名魔礼青、魔礼红、魔礼海、魔礼寿，职风调雨顺。清代每年四月二十三、二十四日均有庙会。为继承历史文化，西元2003年重建南评宫于驾鹤山下，成为体味驾鹤山蕴涵文化的一个道教景点。
+              每月初一、十五，南评宫内香火颇盛。
+            </p>
+            <p>
+              南评宫初建于清咸丰年间，初建时为于柳江南岸的大码头口，后两度遭到毁坏，一是在民国初年军阀混战时被毁。毁时柳州居民将神像转藏在驾鹤山岩洞内供奉，遂流传于后世。二是文革动乱时神像遭砸毁。毁后于西元
+              2003年重塑。
+            </p>
+          </figcaption>
+
+          <div class="w-1/4 shrink-0">
+            <div class="pb-[100%] bg-primary rounded-lg"></div>
+          </div>
+        </figure>
+      </section>
+
+      <section class="space-y-8">
+        <header>
+          <div class="relative w-fit">
+            <div
+              class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+            >
+              <p inert class="sr-only">test</p>
+            </div>
+
+            <div
+              class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+            >
+              <h3 class="text-white">宫观介绍</h3>
+            </div>
+          </div>
+        </header>
+
+        <ul>
+          <li>住持：XXxXx</li>
+          <li>监理（监院）：XXXX</li>
+          <li>办公室主任：XXXXX</li>
+          <li>都管：XxXXX</li>
+          <li>执殿：XxxXxX</li>
+          <li>知客：XXXXXxxx</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</MainLayout>
