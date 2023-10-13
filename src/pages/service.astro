@@ -1,0 +1,489 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import Select from "@components/Select.svelte";
+import ImageIcon from "@assets/ImageIcon.astro";
+---
+
+<MainLayout>
+  <div class="flex container px-2 mt-8">
+    <aside class="w-[300px] px-4 text-sm sticky top-8 self-start">
+      <nav class="rounded-2xl bg-secondary px-8 py-16 flex items-center">
+        <ul
+          class="rounded-l-lg overflow-hidden w-full divide-y-2 divide-secondary text-center"
+        >
+          <li class="p-8 bg-primary text-white">皈依申请</li>
+          <li class="p-8 bg-primary-50">传度/冠巾申请</li>
+          <li class="p-8 bg-primary-50">资料下载</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <section class="flex-1 p-8 bg-primary-50">
+      <header class="flex items-center">
+        <div class="relative w-fit">
+          <div
+            class="bg-primary bg-opacity-50 absolute w-full h-full translate-x-1/4 rounded-md overflow-hidden"
+          >
+            <p inert class="sr-only">test</p>
+          </div>
+
+          <div
+            class="relative bg-gradient-to-r px-4 py-2 from-secondary to-primary rounded-md overflow-hidden"
+          >
+            <h2 class="text-white">皈依申请</h2>
+          </div>
+        </div>
+
+        <ul class="pl-16 flex space-x-4">
+          <li class="py-0.5 text-primary border-b-2 border-primary">
+            <p>提交申请</p>
+          </li>
+
+          <li class="py-0.5 text-gray-500">
+            <p>申请记录</p>
+          </li>
+        </ul>
+      </header>
+
+      <article class="bg-primary bg-opacity-20 p-8 mt-4 space-y-2">
+        <section>
+          <header>
+            <h3 class="font-bold">什么是道教皈依？</h3>
+          </header>
+          <p>
+            皈依就是皈从依靠，道教讲究：第一：皈依无上“道宝”，即皈依“太上无极大道”，能永脱轮回；第二：皈依无上“经宝”，即皈依“三十六部尊经”，能得闻正法；第三：皈依“无上师宝”，即皈依“玄中大法师”，能不落邪见。
+          </p>
+        </section>
+
+        <section>
+          <header>
+            <h3 class="font-bold">皈依道教有什么要求？</h3>
+          </header>
+          <p>
+            皈依入道人不受地域，工作，性别，民族，风俗习惯等方面的限制。皈依未必要出家，在家同样可以皈依入道，简称居士
+          </p>
+        </section>
+
+        <section>
+          <header>
+            <h3 class="font-bold">皈依后有什么好处？</h3>
+          </header>
+          <p>
+            皈依道经师三宝之后，则有三十六部护教神王随身保护，妖邪不敢侵，鬼魅不敢动。常人名籍，录于阴曹地府，随自身功过沦于六道。皈依三宝，为学道者入道之初，首要遵守之规戒。欲脱轮回之苦，必须皈依大道，凭借道经师三宝之力而摆脱轮回，因此，必须遵守皈戒。皈依之后，名籍将从阴曹地府消除，记名于三官大帝青编之籍。从此之后，三宝弟子的一切功过皆归三官大帝考校，阴曹地府无权干涉。
+          </p>
+        </section>
+      </article>
+
+      <div class="space-y-2 px-8 mt-8">
+        <p class="text-gray-500">
+          如果想皈依道教作一个道教居士请完成下列问题，我会会按照您个人条件择优为您推荐师父。
+        </p>
+
+        <p class="text-gray-500">
+          以下<span class="text-red-500">*</span>号为必填选项
+        </p>
+      </div>
+
+      <form class="p-8 space-y-4">
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">您的出生日期</p>
+            <p class="text-gray-500">请填写身份证出生日期</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">姓名</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">性别</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label class="flex space-x-2">
+              <input class="border-primary border" type="radio" name="" />
+              <span>男</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>女</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">婚否</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label class="flex space-x-2">
+              <input class="border-primary border" type="radio" name="" />
+              <span>已婚</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>未婚</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>离异</span>
+            </label>
+          </div>
+        </div>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">民族</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">常用手机号</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">公司</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">职位</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <label class="block">
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">微信号</p>
+          </div>
+
+          <input
+            class="border ml-5 p-2 mt-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+          />
+        </label>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">出生地址</p>
+            <p>请填写身份证备注地址</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex gap-4 flex-wrap">
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择省"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择区"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+
+            <div>
+              <input
+                placeholder="请输入详细地址"
+                class="border p-2 w-96 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+            </div>
+
+            <div>
+              <input
+                placeholder="邮政编码"
+                class="border p-2 w-48 rounded-md border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">所在地</p>
+            <p>请填写现居住地址</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex gap-4 flex-wrap">
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择省"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择区"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">是否有已喜欢的我区道教教职人员</p>
+            <p class="text-gray-500">
+              如果想精确拜师请填写师父道名和所属宫观（必须是我区已认定合规道教教职人员）
+            </p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label class="flex space-x-2">
+              <input class="border-primary border" type="radio" name="" />
+              <span>是</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>香</span>
+            </label>
+          </div>
+
+          <div class="mt-2 pl-5 flex gap-4 flex-wrap">
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择宫观"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+
+            <div>
+              <Select
+                classNames={{
+                  root: "w-48",
+                  input: "bg-white",
+                  wrapper: "border bg-white border-primary rounded-md p-2",
+                }}
+                placeholder={"请选择教职人员"}
+                options={[{ label: "Test", value: "test" }]}
+                client:load
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">您入到最想学什么？（多选）</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label class="flex space-x-2">
+              <input class="border-primary border" type="radio" name="" />
+              <span>周易、风水、命理看相</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>养生、中医、针灸推拿</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>道教科仪、高功</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>琴棋书画、中国传统文化</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>其他</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500 opacity-0">*</span>
+            <p class="text-primary font-bold">您是否可以住观修行？</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label class="flex space-x-2">
+              <input class="border-primary border" type="radio" name="" />
+              <span>可以</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>不可以</span>
+            </label>
+
+            <label class="flex space-x-2">
+              <input type="radio" name="" />
+              <span>可以抽时间做义工</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500 opacity-0">*</span>
+            <p class="text-primary font-bold">
+              请填写个人简历（初中以后得详细简历）
+            </p>
+            <p class="text-gray-500">本条必须仔细填写，作为认证的主要依据</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <textarea
+              class="w-full rounded-md border border-primary focus:outline-none p-2 focus:ring-1 focus:ring-primary"
+              rows="8"></textarea>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">个人一寸照上传</p>
+            <p class="text-gray-500">图片必须小于500M</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label>
+              <input class="absolute opacity-0" type="file" />
+              <div
+                class="flex relative justify-center py-16 bg-secondary text-primary cursor-pointer px-32 items-center"
+              >
+                <div class="h-10 w-10">
+                  <ImageIcon />
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <div class="flex space-x-4 items-center">
+            <span class="text-red-500">*</span>
+            <p class="text-primary font-bold">身份证正反面照片</p>
+            <p class="text-gray-500">图片必须小于500M</p>
+          </div>
+
+          <div class="mt-2 pl-5 flex space-x-8">
+            <label>
+              <input class="absolute opacity-0" type="file" />
+              <div
+                class="flex relative justify-center py-16 bg-secondary text-primary cursor-pointer px-32 items-center"
+              >
+                <div class="h-10 w-10">
+                  <ImageIcon />
+                </div>
+              </div>
+            </label>
+
+            <label>
+              <input class="absolute opacity-0" type="file" />
+              <div
+                class="flex relative justify-center py-16 bg-secondary text-primary cursor-pointer px-32 items-center"
+              >
+                <div class="h-10 w-10">
+                  <ImageIcon />
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <footer class="pt-8">
+          <button
+            class="px-16 py-2 bg-primary text-white rounded-md mx-auto block"
+          >
+            提交申请
+          </button>
+        </footer>
+
+        <div class="pt-8">
+          <p>如填表有疑问请添加微信号：Isplcx888进行咨询。</p>
+          <p>
+            广西道教协会办公室电话0771-5660555，联系人：刘崇垚道长、杨里泽道长。
+          </p>
+        </div>
+      </form>
+    </section>
+  </div>
+</MainLayout>
