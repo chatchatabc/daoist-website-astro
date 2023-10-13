@@ -19,7 +19,7 @@
 <div bind:this={selectRef} class={`custom-select relative ${classNames?.root}`}>
   <div class={`flex items-center ${classNames?.wrapper}`}>
     <input
-      class={`flex-1 ${classNames?.input} focus:outline-none`}
+      class={`flex-1 min-w-0 ${classNames?.input} focus:outline-none`}
       {placeholder}
       value={selectedOption}
       on:focus={() => (isOpen = true)}
@@ -29,7 +29,7 @@
     <button
       type="button"
       on:click={() => (isOpen = !isOpen)}
-      class={`w-4 h-4 transition ${isOpen ? "rotate-180" : ""}`}
+      class={`w-4 h-4 shrink-0 transition ${isOpen ? "rotate-180" : ""}`}
     >
       <CaretIcon />
     </button>
